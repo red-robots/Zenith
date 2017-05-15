@@ -18,7 +18,22 @@ div {
 }
 .clear {clear: both;}
 .wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: stretch;
 	margin: 0px auto;
+	.logo {
+		color: white;
+		padding-top: 20px;
+		font-weight: bold;
+		font-size: 16pt;
+	}
+	.right-section {
+		.search-icon {
+		color: white;
+		}
+	}
 
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
@@ -57,11 +72,12 @@ div {
 }
 
 .spacer {
-	width: 10%;
+	width: 5%;
 	border-bottom: 1px solid #000;
 	margin: 0 auto;
 	border-bottom-color: red;
 }
+
 .banner {
   background:
     linear-gradient(
@@ -73,18 +89,22 @@ div {
 .banner-text {
 	text-align: center;
 	position: absolute;
-	top: 50%;
-	bottom: 50%;
+	top: 40%;
+	bottom: 60%;
 	width: 100%;
 	h2 {
 		text-transform: uppercase;
 		color: white;
 		font-size: 40pt;
 		text-align: center;
+		font-family: 'rubik';
+		font-weight: bold;
 	}
 	h3 {
 		font-style: italic;
 		color: white;
+		font-family: 'Kaushan Script';
+		font-size: 20pt;
 	}
 }
 
@@ -97,14 +117,17 @@ div {
 			font-style: italic;
 			text-align: center;
 			padding: 20px 10px 0px 10px;
+			font-family: 'Kaushan Script';
 		}
 		h2 {
 			text-align: center;
 			padding: 0px 10px;
+			font-family: 'rubik';
+			font-weight: bold;
 		}
 		p {
 			text-align: center;
-			padding: 20px;
+			padding: 20px 100px;
 		}
 		.Our-Story-Image {
 			display: flex;
@@ -120,13 +143,15 @@ div {
 		background-color: #96E0D3;
 		padding: 10px;
 		h3 {
-			font-style: italic;
 			text-align: center;
 			color: white;
+			font-family: 'Kaushan Script';
 		}
 		h2 {
 			text-align: center;
 			color: white;
+			font-family: 'rubik';
+			font-weight: bold;
 		}
 		p {
 			text-align: center;
@@ -141,15 +166,17 @@ div {
 	padding: 20px;
 	.Our-Services {
 		h3 {
-			font-style: italic;
 			text-align: center;
+			font-family: 'Kaushan Script';
 		}
 		h2 {
 			text-align: center;
+			font-family: 'rubik';
+			font-weight: bold;
 		}
 		p {
 			text-align: center;
-			padding: 20px;
+			padding: 20px 100px;
 		}
 	}
 }
