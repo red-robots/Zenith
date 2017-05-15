@@ -1,14 +1,17 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
+	float: right;
 	width: 100%;
+	text-align: center;
+	padding: 10px 20px;
 
 	ul {
 		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		float: right;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -49,8 +52,12 @@
 		}
 	}
 	li {
+		display: block;
 		float: left;
 		position: relative;
+		padding: 10px 5px 15px;
+		text-transform: uppercase;
+		font-family: Arial;
 
 		&:hover > a,
 		&.focus > a {
@@ -59,6 +66,7 @@
 	a {
 		display: block;
 		text-decoration: none;
+		color: #fff;
 	}
 
 	.current_page_item > a,

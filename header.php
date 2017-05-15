@@ -29,11 +29,11 @@
 			
 			<?php if(is_home()) { ?>
 	            <h1 class="logo">
-	            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+	            <a href="<?php bloginfo('url'); ?>"><?php the_field('compant_name', 'option'); ?></a>
 	            </h1>
 	        <?php } else { ?>
 	            <div class="logo">
-	            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+	            <a href="<?php bloginfo('url'); ?>"><?php the_field('company_name', 'option'); ?></a>
 	            </div>
 	        <?php } ?>
 

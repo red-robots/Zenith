@@ -14,43 +14,68 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) :
+<?php
+	$wp_query = new WP_Query();
+	$wp_query->query(array(
+		'post_type'=>'page',
+		'name'=>'homepage'
+	));
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+	if ($wp_query->have_posts()) :  while ($wp_query->have_posts()) : $wp_query->the_post();
 
-			<?php
-			endif;
+    $mytext = get_field('banner_text');
+    $subtext = get_field('banner_subheading'); 
+    $image1 = get_field('image_1');
+    $image2 = get_field('image_2');
+    $image3 = get_field('image_3');
+   
+?>
+<div class="banner">
+    	<div class="banner-text">
+    		<h3><?php echo $subtext; ?></h3>
+    		<h2><?php echo $mytext; ?></h2>
+    	</div>
+    	<!-- banner text -->
+    </div>	
+    <!-- banner -->
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+<div class="row2">
+		<div class="Our-Story">
+			<h3><?php the_field('about_us_subtext'); ?></h3>
+	   		<h2><?php the_field('about_us_header'); ?></h2>
+	   		<div class="spacer"></div>
+	   		<p><?php the_field('about_us_text'); ?></p>
+	   	<img class="Our-Story-Image">
+	   		<img src="<?php echo $image1; ?>"/>
+	   		<img src="<?php echo $image2; ?>"/>
+	   		<img src="<?php echo $image3; ?>"/>
+		</div>
+	<!-- row2 -->
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+<div class="row3">
+	<div class="Newsletter">
+			<h3><?php the_field('newsletter_subheader'); ?></h3>
+	   		<h2><?php the_field('newsletter_header'); ?></h2>
+	   		<p><?php the_field('newsletter_text'); ?></p>
+</div>
+	<!-- row3 -->
+<div class="row4">
+	<div class="Our-Services">
+			<h3><?php the_field('our_services_subheader'); ?></h3>
+	   		<h2><?php the_field('our_serviced_header'); ?></h2>
+	   		<div class="spacer"></div>
+	   		<p><?php the_field('our_services_text'); ?></p>
+</div>
+	<!-- row4 -->
 
-			endwhile;
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
+	<?php endwhile; //endwhile for main loop
+	endif; //endif for main loop?> 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
