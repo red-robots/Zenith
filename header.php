@@ -18,6 +18,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
 
 <?php wp_head(); ?>
 </head>
@@ -28,19 +29,21 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="wrapper">
-			<div class="logo">
-				<?php the_field('company_name', 'option'); ?></a>
-			</div><!-- logo -->
-		<div class="right-section">
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'acstarter' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			</nav><!-- #site-navigation -->
-				<div class="search-icon">
-					<i class="fa fa-search"></i>
-				</div><!--search-icon -->
+				<div class="logo">
+					<?php the_field('company_name', 'option'); ?></a>
+				</div><!-- logo -->
+			<div class="right-section">
+				<div class="menu">
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'acstarter' ); ?></button>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav><!-- #site-navigation -->
+				</div><!--menu -->
+					<div class="search-icon">
+						<i class="fa fa-search"></i>
+					</div><!--search-icon -->
 			</div><!--right-section -->
-	</div><!-- wrapper -->
+		</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content wrapper">

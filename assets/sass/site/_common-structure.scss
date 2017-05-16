@@ -20,20 +20,24 @@ div {
 .wrapper {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
-	align-items: stretch;
+	justify-content: space-between;
 	margin: 0px auto;
 	.logo {
 		color: white;
-		padding-top: 20px;
+		padding: 25px 50px;
 		font-weight: bold;
 		font-size: 16pt;
 	}
 	.right-section {
-		.search-icon {
-		color: white;
-		}
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		padding: 10px 40px;
 	}
+	.search-icon {
+		color: white;
+		padding: 20px 10px 10px;
+		}
 
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
@@ -92,19 +96,30 @@ div {
 	top: 40%;
 	bottom: 60%;
 	width: 100%;
+	line-height: 0em;
 	h2 {
 		text-transform: uppercase;
 		color: white;
 		font-size: 40pt;
 		text-align: center;
-		font-family: 'rubik';
-		font-weight: bold;
+		font-family: 'Rubik', sans-serif;
+		font-weight: 700;
+		
+			@media screen and (min-width: $tabwidth) {
+				padding: 0px 400px;
+				margin-top: 0px;
+				line-height: 110%;
+			}
+			@media screen and (min-width: $deskwidth) {
+			
+			}
 	}
 	h3 {
 		font-style: italic;
 		color: white;
-		font-family: 'Kaushan Script';
+		font-family: 'Kaushan Script', cursive;
 		font-size: 20pt;
+		margin-bottom: 0px;
 	}
 }
 
