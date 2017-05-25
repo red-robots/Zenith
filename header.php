@@ -30,17 +30,23 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="wrapper">
 				<div class="logo">
-					<?php the_field('company_name', 'option'); ?></a>
+					<a href="http://localhost:8888/startertheme/"><?php the_field('company_name', 'option'); ?></a>
 				</div><!-- logo -->
 			<div class="right-section">
-				<div class="menu">
+				<div class="menu">  
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'acstarter' ); ?></button>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					</nav><!-- #site-navigation -->
-				</div><!--menu -->
+				</div><!--menu --> 
 					<div class="search-icon">
 						<i class="fa fa-search"></i>
+						<form role="search" method="get" class="search-form" action=" <?php esc_url( home_url( '/' ) );?>">
+			                <label>
+			                    <span class="screen-reader-text"><?php _x( 'Search for:', 'label' ) ;?></span>
+			                    <input type="search" class="search-field" placeholder="<?php esc_attr_x( 'Search &hellip;', 'placeholder' );?>" value=" <?php get_search_query();?>" name="s" />
+			                </label>
+	            		</form>
 					</div><!--search-icon -->
 			</div><!--right-section -->
 		</div><!-- wrapper -->

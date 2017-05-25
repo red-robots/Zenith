@@ -1387,9 +1387,11 @@ html[xmlns] .flexslider .slides{display:block}
 div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-break:break-all;word-break:break-word;-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
 .clear{clear:both}
 .wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin:0 auto}
-.wrapper .logo{color:white;padding:25px 50px;font-weight:bold;font-size:16pt}
+.wrapper .logo{padding:25px 50px;font-weight:bold;font-size:16pt}
+.wrapper .logo a{color:white;text-decoration:none}
 .wrapper .right-section{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;padding:10px 40px}
-.wrapper .search-icon{color:white;padding:20px 10px 10px}
+.wrapper .search-icon{padding:20px 10px 10px;position:relative;color:white}
+.wrapper .search-icon form{display:none;position:absolute;right:100%;top:20px}
 @media screen and (min-width:600px){.wrapper{width:100%}
 }.content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
@@ -1407,8 +1409,8 @@ div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 .row2 .Our-Story{background-color:white;padding:20px}
 .row2 .Our-Story h3{font-style:italic;text-align:center;padding:20px 10px 0 10px;font-family:'Kaushan Script'}
 .row2 .Our-Story h2{text-align:center;padding:0 10px;font-family:'rubik';font-weight:bold}
-.row2 .Our-Story p{text-align:center;padding:20px 100px}
-.row2 .Our-Story .Our-Story-Image{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.row2 .Our-Story p{text-align:center;padding:0 100px}
+.row2 .Our-Story .Us-Images{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;padding-top:20px;padding-bottom:80px}
 .row3{width:100%}
 .row3 .Newsletter{background-color:#96e0d3;padding:10px}
 .row3 .Newsletter h3{text-align:center;color:white;font-family:'Kaushan Script'}
@@ -1417,7 +1419,7 @@ div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 .row4{width:100%;background-color:white;padding:20px}
 .row4 .Our-Services h3{text-align:center;font-family:'Kaushan Script'}
 .row4 .Our-Services h2{text-align:center;font-family:'rubik';font-weight:bold}
-.row4 .Our-Services p{text-align:center;padding:20px 100px}
+.row4 .Our-Services p{text-align:center;padding:0 100px 20px}
 .sticky{display:block}
 .hentry{margin:0 0 1.5em}
 .byline,.updated:not(.published){display:none}

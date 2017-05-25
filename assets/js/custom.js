@@ -7,6 +7,38 @@
 
 jQuery(document).ready(function ($) {
 	
+
+	$('.search-icon i').click(function(){
+		var $this = $(this);
+		var $parent = $this.parent();
+		var $form = $parent.find("form");
+		var $menu = $('#site-navigation');		
+		if($parent.length>0 && $form.length > 0 && $menu.length>0){
+			if($parent.hasClass('active')){
+				$form.animate({
+					width: 0
+				},200,function(){
+					$form.css({
+						width: '',
+						display: '',
+					});
+					$parent.removeClass("active");
+				});
+				$menu.show(200);
+			} else {
+				$parent.addClass("active");
+				var saved_width = ($form.outerWidth()/$parent.outerWidth())*100 + "%";
+				$form.css({
+					display: "block",
+					width: 0
+				});
+				$form.animate({
+					width: saved_width
+				},200);
+				$menu.hide(200);
+			}
+		}
+	});
 	/*
 	*
 	*	Current Page Active
@@ -65,14 +97,6 @@ jQuery(document).ready(function ($) {
 	    return false;
 	});
 
-	/*
-	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
 	
 	
 	/*

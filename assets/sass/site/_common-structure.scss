@@ -23,10 +23,13 @@ div {
 	justify-content: space-between;
 	margin: 0px auto;
 	.logo {
-		color: white;
 		padding: 25px 50px;
 		font-weight: bold;
 		font-size: 16pt;
+		a {
+			color: white;
+			text-decoration: none;
+		}
 	}
 	.right-section {
 		display: flex;
@@ -35,9 +38,17 @@ div {
 		padding: 10px 40px;
 	}
 	.search-icon {
-		color: white;
 		padding: 20px 10px 10px;
+		position: relative;
+		color: white;
+
+		form {
+			display: none;
+			position: absolute;
+			right: 100%;
+			top: 20px;
 		}
+	}
 
 	@media screen and (min-width: $tabwidth) {
 		width: 100%;
@@ -142,12 +153,14 @@ div {
 		}
 		p {
 			text-align: center;
-			padding: 20px 100px;
+			padding: 0px 100px;
 		}
-		.Our-Story-Image {
+		.Us-Images {
 			display: flex;
 			flex-direction: row;
-			justify-content: center;
+			justify-content: space-around;
+			padding-top: 20px;
+			padding-bottom: 80px;
 		}
 	}
 }
@@ -191,7 +204,7 @@ div {
 		}
 		p {
 			text-align: center;
-			padding: 20px 100px;
+			padding: 0px 100px 20px;
 		}
 	}
 }

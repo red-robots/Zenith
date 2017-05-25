@@ -49,9 +49,11 @@ get_header(); ?>
 	   		<div class="spacer"></div>
 	   		<p><?php the_field('about_us_text'); ?></p>
 	   	<img class="Our-Story-Image">
-	   		<img src="<?php echo $image1; ?>"/>
-	   		<img src="<?php echo $image2; ?>"/>
-	   		<img src="<?php echo $image3; ?>"/>
+	   		<div class="Us-Images">
+	   			<img src="<?php echo $image1['sizes']['medium']; ?>"/>
+		   		<img src="<?php echo $image2['sizes']['medium']; ?>"/>
+		   		<img src="<?php echo $image3['sizes']['medium']; ?>"/>
+	   		</div>
 		</div>
 	<!-- row2 -->
 
