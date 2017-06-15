@@ -33,14 +33,15 @@ get_header(); ?>
     $image3 = get_field('image_3');
    
 ?>
+
+
 <div class="banner">
-    	<div class="banner-text">
-    		<h3><?php echo $subtext; ?></h3>
-    		<h2><?php echo $mytext; ?></h2>
-    	</div>
-    	<!-- banner text -->
-    </div>	
-    <!-- banner -->
+	<div class="banner-text">
+		<h3><?php echo $subtext; ?></h3>
+		<h2><?php echo $mytext; ?></h2>
+	</div><!-- banner text -->
+</div><!-- banner -->
+
 
 <div class="row2">
 		<div class="Our-Story">
@@ -53,25 +54,50 @@ get_header(); ?>
 	   			<img src="<?php echo $image1['sizes']['medium']; ?>"/>
 		   		<img src="<?php echo $image2['sizes']['medium']; ?>"/>
 		   		<img src="<?php echo $image3['sizes']['medium']; ?>"/>
-	   		</div>
-		</div>
-	<!-- row2 -->
+	   		</div><!--Images -->
+	   	</div> <!--Our-Story -->
+</div><!-- row2 -->
 
 <div class="row3">
 	<div class="Newsletter">
 			<h3><?php the_field('newsletter_subheader'); ?></h3>
 	   		<h2><?php the_field('newsletter_header'); ?></h2>
 	   		<p><?php the_field('newsletter_text'); ?></p>
-</div>
-	<!-- row3 -->
+	</div><!--Newsletter -->
+</div><!-- row3 -->
+
+
 <div class="row4">
 	<div class="Our-Services">
 			<h3><?php the_field('our_services_subheader'); ?></h3>
 	   		<h2><?php the_field('our_serviced_header'); ?></h2>
 	   		<div class="spacer"></div>
 	   		<p><?php the_field('our_services_text'); ?></p>
-</div>
-	<!-- row4 -->
+
+	   		<div class="zenith-services">
+	   		<!--custom post type -->
+		</div><!-- Zenith-Services -->
+	</div><!-- Our-Services -->
+</div><!-- row4 -->
+
+
+<div class ="row5">
+	<div class="Our-Work">
+		<h3><?php the_field('our_work_subheader'); ?></h3>
+		<h2><?php the_field('our_work_header'); ?></h2>
+		<div class="spacer"></div>
+		<p><?php the_field('our_work_text'); ?></p>
+	</div><!-- Our-Work -->
+</div><!-- row5 -->
+
+
+<div class="row6">
+	<div class="Contact-Us">
+		<h3><?php the_field('contact_us_subheader'); ?></h3>
+		<h2><?php the_field('contact_us_header'); ?></h2>
+		<p><?php the_field('contact_us_text'); ?></p>
+	</div><!--Contact-Us -->
+</div><!--row6 -->
 
 
 	<?php endwhile; //endwhile for main loop

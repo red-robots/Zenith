@@ -30,7 +30,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="wrapper">
 				<div class="logo">
-					<a href="http://localhost:8888/startertheme/"><?php the_field('company_name', 'option'); ?></a>
+					<a href="http://localhost:8888/zenith/"><?php the_field('company_name', 'option'); ?></a>
 				</div><!-- logo -->
 			<div class="right-section">
 				<div class="menu">  

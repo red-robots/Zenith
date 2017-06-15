@@ -57,6 +57,9 @@ div {
 
 	}
 }
+.content-area-full {
+	width: 100%;
+}
 
 .content-area {
 	width: 100%;
@@ -96,7 +99,7 @@ div {
 .banner {
   background:
     linear-gradient(
-      #E79086, #EECF8E
+      #273274, #F0D48B
     );
    height: 100vh;
 }
@@ -111,7 +114,7 @@ div {
 	h2 {
 		text-transform: uppercase;
 		color: white;
-		font-size: 40pt;
+		font-size: 45pt;
 		text-align: center;
 		font-family: 'Rubik', sans-serif;
 		font-weight: 700;
@@ -129,7 +132,9 @@ div {
 		font-style: italic;
 		color: white;
 		font-family: 'Kaushan Script', cursive;
-		font-size: 20pt;
+		font-size: 30pt;
+		letter-spacing: 2px;
+		font-weight: lighter;
 		margin-bottom: 0px;
 	}
 }
@@ -150,6 +155,7 @@ div {
 			padding: 0px 10px;
 			font-family: 'rubik';
 			font-weight: bold;
+			font-size: 20pt;
 		}
 		p {
 			text-align: center;
@@ -168,7 +174,7 @@ div {
 .row3 {
 	width: 100%;
 	.Newsletter {
-		background-color: #96E0D3;
+		background-color: #273274;
 		padding: 10px;
 		h3 {
 			text-align: center;
@@ -206,5 +212,84 @@ div {
 			text-align: center;
 			padding: 0px 100px 20px;
 		}
+		.zenith-services {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-content: center;
+			h4 {
+				align-content: center;
+			}
+			p {
+				text-align: center;
+				padding: 0px 62px;
+				width: 30%;
+
+			}
+		}
+	}
+}
+
+.row5 {
+	width: 100%;
+	background-color: white;
+	padding: 20px;
+	.Our-Work {
+		h3 {
+			text-align: center;
+			font-family: 'Kaushan Script';
+		}
+		h2 {
+			text-align: center;
+			font-family: 'rubik';
+			font-weight: bold;
+		}
+		p {
+			text-align: center;
+			padding: 0px 100px 20px;
+		}
+	}
+}
+
+.row6 {
+	width: 100%;
+	background-color: #273274;
+	padding: 20px;
+	.Contact-Us {
+		h3 {
+			text-align: center;
+			font-family: 'Kaushan Script';
+			color: white;
+		}
+		h2 {
+			text-align: center;
+			font-family: 'rubik';
+			font-weight: bold;
+			color: white;
+		}
+	}
+}
+.footer {
+	background-color: #F0D48B;
+	padding: 20px;
+	h3 {
+		margin-left: 70px;
+		font-weight: lighter;
+		font-size: 14pt;
+	}
+	.social-icons-footer {
+		margin: -50px 0 0 70px;
+		font-size: 25px;
+	}
+	.fa {
+		color: white;
+	}
+	.fa-facebook {
+		color: black;
+		font-size: 20px;
+	}
+	.fa-linkedin {
+		color: black;
+		font-size: 20px;
 	}
 }
