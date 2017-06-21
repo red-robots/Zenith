@@ -69,13 +69,13 @@ get_header(); ?>
 
 <div class="row4">
 	<div class="Our-Services">
-
 			<h3><?php the_field('our_services_subheader'); ?></h3>
-	   		<h2><?php the_field('our_services_header'); ?></h2>
+	   		<h2><?php the_field('our_serviced_header'); ?></h2>
 	   		<div class="spacer"></div>
+	   		<p><?php the_field('our_services_text'); ?></p>
 
 	   		<div class="zenith-services">
-	 			
+	   		<!--custom post type -->
 		</div><!-- Zenith-Services -->
 	</div><!-- Our-Services -->
 </div><!-- row4 -->
