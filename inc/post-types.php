@@ -5,21 +5,21 @@ add_action('init', 'js_custom_init');
 function js_custom_init() 
 {
 	
-	// Register the Homepage Slides
+	// Register the Homepage Services
   
      $labels = array(
-	'name' => _x('Slides', 'post type general name'),
-    'singular_name' => _x('Slide', 'post type singular name'),
-    'add_new' => _x('Add New', 'Slide'),
-    'add_new_item' => __('Add New Slide'),
-    'edit_item' => __('Edit Slides'),
-    'new_item' => __('New Slide'),
-    'view_item' => __('View Slides'),
-    'search_items' => __('Search Slides'),
-    'not_found' =>  __('No Slides found'),
-    'not_found_in_trash' => __('No Slides found in Trash'), 
+	 'name' => _x('Services', 'post type general name'),
+    'singular_name' => _x('Service', 'post type singular name'),
+    'add_new' => _x('Add New', 'Service'),
+    'add_new_item' => __('Add New Service'),
+    'edit_item' => __('Edit Service'),
+    'new_item' => __('New Service'),
+    'view_item' => __('View Services'),
+    'search_items' => __('Search Services'),
+    'not_found' =>  __('No Services found'),
+    'not_found_in_trash' => __('No Services found in Trash'), 
     'parent_item_colon' => '',
-    'menu_name' => 'Slides'
+    'menu_name' => 'Services'
   );
   $args = array(
 	'labels' => $labels,

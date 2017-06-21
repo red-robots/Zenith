@@ -23,22 +23,16 @@ div {
 	justify-content: space-between;
 	margin: 0px auto;
 	.logo {
-		padding: 25px 50px;
-		font-weight: bold;
-		font-size: 16pt;
-		a {
-			color: white;
-			text-decoration: none;
-		}
+		padding: 0px 20px 0px 80px;
 	}
 	.right-section {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
-		padding: 10px 40px;
+		padding: 10px 70px;
 	}
 	.search-icon {
-		padding: 20px 10px 10px;
+		padding: 20px 20px 10px;
 		position: relative;
 		color: white;
 
@@ -114,7 +108,7 @@ div {
 	h2 {
 		text-transform: uppercase;
 		color: white;
-		font-size: 45pt;
+		font-size: 55pt;
 		text-align: center;
 		font-family: 'Rubik', sans-serif;
 		font-weight: 700;
@@ -135,7 +129,7 @@ div {
 		font-size: 30pt;
 		letter-spacing: 2px;
 		font-weight: lighter;
-		margin-bottom: 0px;
+		margin-bottom: -30px;
 	}
 }
 
@@ -208,24 +202,8 @@ div {
 			font-family: 'rubik';
 			font-weight: bold;
 		}
-		p {
-			text-align: center;
-			padding: 0px 100px 20px;
-		}
-		.zenith-services {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			align-content: center;
-			h4 {
-				align-content: center;
-			}
-			p {
-				text-align: center;
-				padding: 0px 62px;
-				width: 30%;
-
-			}
+		.Zenith-Services {
+			padding: 20px;
 		}
 	}
 }
