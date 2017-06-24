@@ -35,75 +35,104 @@ get_header(); ?>
 ?>
 
 
-<div class="banner">
-	<div class="banner-text">
-		<h3><?php echo $subtext; ?></h3>
-		<h2><?php echo $mytext; ?></h2>
-	</div><!-- banner text -->
-</div><!-- banner -->
+<section class="banner">
+	<header class="section-banner-text">
+		<h2><?php echo $subtext; ?></h2>
+		<h1><?php echo $mytext; ?></h1>
+	</header><!-- banner text -->
+</section><!-- banner -->
 
 
-<div class="row2">
-		<div class="Our-Story">
-			<h3><?php the_field('about_us_subtext'); ?></h3>
-	   		<h2><?php the_field('about_us_header'); ?></h2>
-	   		<div class="spacer"></div>
-	   		<p><?php the_field('about_us_text'); ?></p>
-	   	<img class="Our-Story-Image">
-	   		<div class="Us-Images">
+<section class="about">
+	<header class="section-header-white">
+		<h3><?php the_field('about_us_subtext'); ?></h3>
+		<h2><?php the_field('about_us_header'); ?></h2>
+		<div class="spacer"></div>
+	   	<p><?php the_field('about_us_text'); ?></p>
+	   	<img class="our-story-image">
+	   		<div class="us-images"> <!--custom post type "staff" -->
 	   			<img src="<?php echo $image1['sizes']['medium']; ?>"/>
 		   		<img src="<?php echo $image2['sizes']['medium']; ?>"/>
 		   		<img src="<?php echo $image3['sizes']['medium']; ?>"/>
 	   		</div><!--Images -->
-	   	</div> <!--Our-Story -->
-</div><!-- row2 -->
+	</header>   		
+</section><!-- row2 -->
 
-<div class="row3">
-	<div class="Newsletter">
+<section class="newsletter">
+	<header class="section-header-blue">
 			<h3><?php the_field('newsletter_subheader'); ?></h3>
 	   		<h2><?php the_field('newsletter_header'); ?></h2>
-	   		<p><?php the_field('newsletter_text'); ?></p>
-	</div><!--Newsletter -->
-</div><!-- row3 -->
+		<p><?php the_field('newsletter_text'); ?></p>
+	</header><!--Newsletter -->	
+</section><!-- row3 -->
 
 
-<div class="row4">
-	<div class="Our-Services">
-			<h3><?php the_field('our_services_subheader'); ?></h3>
-	   		<h2><?php the_field('our_serviced_header'); ?></h2>
-	   		<div class="spacer"></div>
-	   		<p><?php the_field('our_services_text'); ?></p>
+<section class="services">
+	<header class="section-header-white">
+		<h3><?php the_field('our_services_subheader'); ?></h3>
+   		<h2><?php the_field('our_serviced_header'); ?></h2>
+   		<div class="spacer"></div>
+   	</header>
+   		<p><?php the_field('our_services_text'); ?></p>  		
 
-	   		<div class="zenith-services">
-	   		<!--custom post type -->
-		</div><!-- Zenith-Services -->
-	</div><!-- Our-Services -->
-</div><!-- row4 -->
+	<div id="our-work-zenith">
+		<?php 
+		// Query the Post type Services
+		$queryServices = array(
+			'post_type' => 'service',
+			'posts_per_page' => '-1'
+		);
+		// The Query
+		$the_query = new WP_Query( $queryServices );
+		?>
+		<?php 
+		// The Loop
+		 if ( $the_query->have_posts()) : ?>
+ 
+	<div class="zenith-services">
+	    <ul class="services">
+	      	<?php while ( $the_query->have_posts() ) : ?>
+				<?php $the_query->the_post(); ?>      
+		        <li> 
+		          <h2><?php the_title();?></h2>
+		          <div class="spacer"></div>
+		          <h3><?php the_content();?></h3>
+		        </li> 
+	        <?php endwhile; ?>
+	    </ul><!--services -->
+	</div><!--zenith-services -->
+ 
+ 		<?php endif; // end loop ?>
+        
+    <?php wp_reset_postdata(); ?>
+    
+	</div><!--our-work-zenith -->
+</section><!--Services -->
 
 
-<div class ="row5">
-	<div class="Our-Work">
+<section class="work">
+	<header class="section-header-white">
 		<h3><?php the_field('our_work_subheader'); ?></h3>
 		<h2><?php the_field('our_work_header'); ?></h2>
 		<div class="spacer"></div>
+	</header>
 		<p><?php the_field('our_work_text'); ?></p>
-	</div><!-- Our-Work -->
-</div><!-- row5 -->
+</section><!--Work -->
 
 
-<div class="row6">
-	<div class="Contact-Us">
+<section class="contact">
+	<header class="section-header-blue">
 		<h3><?php the_field('contact_us_subheader'); ?></h3>
 		<h2><?php the_field('contact_us_header'); ?></h2>
 		<p><?php the_field('contact_us_text'); ?></p>
-	</div><!--Contact-Us -->
-</div><!--row6 -->
+	</header>
+</section><!--Contact -->
 
 
-	<?php endwhile; //endwhile for main loop
-	endif; //endif for main loop?> 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		<?php endwhile; //endwhile for main loop
+		endif; //endif for main loop?> 
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
 get_footer();
