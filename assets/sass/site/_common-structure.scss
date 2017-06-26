@@ -96,7 +96,12 @@ p {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
-		padding: 10px 70px;
+		padding: 10px 20px;
+		@media screen and (min-width: $tabwidth) {
+			padding: 10px 70px;		}
+		@media screen and (min-width: $deskwidth) {
+
+		}
 	}
 	.search-icon {
 		padding: 10px;

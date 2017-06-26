@@ -4,7 +4,19 @@
 	lex-direction: row;
 	align-items: stretch;
 	text-align: center;
+	a{
+		>i {
+			color: white;
+			padding: 12px 10px;
+			@media screen and (min-width: $tabwidth) {
+					display: none;
+				}
+			@media screen and (min-width: $deskwidth) {
 
+			}
+		}
+	}
+	
 	ul {
 		display: none;
 		list-style: none;
@@ -85,6 +97,8 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	color: #273274;
+	width: 80px;
 }
 
 @media screen and (min-width: 37.5em) {
