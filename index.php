@@ -43,10 +43,11 @@ get_header(); ?>
 </section><!-- banner -->
 
 
+<a name="about"></a>
 <section class="about">
 	<header class="section-header-white">
 		<h3><?php the_field('about_us_subtext'); ?></h3>
-		<h2><?php the_field('about_us_header'); ?></h2>
+		<a href="#section1"><h2><?php the_field('about_us_header'); ?></h2></a>
 		<div class="spacer"></div>
 	   	<p><?php the_field('about_us_text'); ?></p>
 	   	<img class="our-story-image">
@@ -58,6 +59,7 @@ get_header(); ?>
 	</header>   		
 </section><!-- row2 -->
 
+
 <section class="newsletter">
 	<header class="section-header-blue">
 			<h3><?php the_field('newsletter_subheader'); ?></h3>
@@ -66,7 +68,7 @@ get_header(); ?>
 	</header><!--Newsletter -->	
 </section><!-- row3 -->
 
-
+<a name="services"></a>
 <section class="services">
 	<header class="section-header-white">
 		<h3><?php the_field('our_services_subheader'); ?></h3>
@@ -109,7 +111,7 @@ get_header(); ?>
 	</div><!--our-work-zenith -->
 </section><!--Services -->
 
-
+<a name="work"></a>
 <section class="work">
 	<header class="section-header-white">
 		<h3><?php the_field('our_work_subheader'); ?></h3>
@@ -119,7 +121,7 @@ get_header(); ?>
 		<p><?php the_field('our_work_text'); ?></p>
 </section><!--Work -->
 
-
+<a name="contact"></a>
 <section class="contact">
 	<header class="section-header-blue">
 		<h3><?php the_field('contact_us_subheader'); ?></h3>
