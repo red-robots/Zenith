@@ -5,21 +5,21 @@ add_action('init', 'js_custom_init');
 function js_custom_init() 
 {
 	
-	// Register the Homepage Services
+	// Register the Homepage Project
   
      $labels = array(
-	 'name' => _x('Services', 'post type general name'),
-    'singular_name' => _x('Service', 'post type singular name'),
-    'add_new' => _x('Add New', 'Service'),
-    'add_new_item' => __('Add New Service'),
-    'edit_item' => __('Edit Service'),
-    'new_item' => __('New Service'),
-    'view_item' => __('View Services'),
-    'search_items' => __('Search Services'),
-    'not_found' =>  __('No Services found'),
-    'not_found_in_trash' => __('No Services found in Trash'), 
+	 'name' => _x('Project', 'post type general name'),
+    'singular_name' => _x('Project', 'post type singular name'),
+    'add_new' => _x('Add New', 'Project'),
+    'add_new_item' => __('Add New Project'),
+    'edit_item' => __('Edit Project'),
+    'new_item' => __('New Project'),
+    'view_item' => __('View Project'),
+    'search_items' => __('Search Projects'),
+    'not_found' =>  __('No Projects found'),
+    'not_found_in_trash' => __('No Projects found in Trash'), 
     'parent_item_colon' => '',
-    'menu_name' => 'Services'
+    'menu_name' => 'Projects'
   );
   $args = array(
 	'labels' => $labels,

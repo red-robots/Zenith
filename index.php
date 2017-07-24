@@ -47,7 +47,7 @@ get_header(); ?>
 <section class="about">
 	<header class="section-header-white">
 		<h3><?php the_field('about_us_subtext'); ?></h3>
-		<a href="#section1"><h2><?php the_field('about_us_header'); ?></h2></a>
+		<h2><?php the_field('about_us_header'); ?></h2>
 		<div class="spacer"></div>
 	   	<p><?php the_field('about_us_text'); ?></p>
 	   	<img class="our-story-image">
@@ -57,59 +57,18 @@ get_header(); ?>
 		   		<img src="<?php echo $image3['sizes']['medium']; ?>"/>
 	   		</div><!--Images -->
 	</header>   		
-</section><!-- row2 -->
+</section><!-- About -->
 
 
+<a name="newsletter"></a>
 <section class="newsletter">
 	<header class="section-header-blue">
 			<h3><?php the_field('newsletter_subheader'); ?></h3>
 	   		<h2><?php the_field('newsletter_header'); ?></h2>
 		<p><?php the_field('newsletter_text'); ?></p>
-	</header><!--Newsletter -->	
-</section><!-- row3 -->
+	</header>
+</section><!-- Newsletter -->
 
-<a name="services"></a>
-<section class="services">
-	<header class="section-header-white">
-		<h3><?php the_field('our_services_subheader'); ?></h3>
-   		<h2><?php the_field('our_serviced_header'); ?></h2>
-   		<div class="spacer"></div>
-   	</header>
-   		<p><?php the_field('our_services_text'); ?></p>  		
-
-	<div id="our-work-zenith">
-		<?php 
-		// Query the Post type Services
-		$queryServices = array(
-			'post_type' => 'service',
-			'posts_per_page' => '-1'
-		);
-		// The Query
-		$the_query = new WP_Query( $queryServices );
-		?>
-		<?php 
-		// The Loop
-		 if ( $the_query->have_posts()) : ?>
- 
-	<div class="zenith-services">
-	    <ul class="services">
-	      	<?php while ( $the_query->have_posts() ) : ?>
-				<?php $the_query->the_post(); ?>      
-		        <li> 
-		          <h2><?php the_title();?></h2>
-		          <div class="spacer"></div>
-		          <h3><?php the_content();?></h3>
-		        </li> 
-	        <?php endwhile; ?>
-	    </ul><!--services -->
-	</div><!--zenith-services -->
- 
- 		<?php endif; // end loop ?>
-        
-    <?php wp_reset_postdata(); ?>
-    
-	</div><!--our-work-zenith -->
-</section><!--Services -->
 
 <a name="work"></a>
 <section class="work">
@@ -119,7 +78,39 @@ get_header(); ?>
 		<div class="spacer"></div>
 	</header>
 		<p><?php the_field('our_work_text'); ?></p>
+		
+		<div id="zenith-work">
+<?php 
+// Query the Post type Project
+$queryProject = array(
+	'post_type' => 'project',
+	'posts_per_page' => '-1'
+);
+// The Query
+$the_query = new WP_Query( $queryProject );
+?>
+<?php 
+// The Loop
+ if ( $the_query->have_posts()) : ?>
+ 
+	<div class="ZenithWork">
+	        <ul class="projects">
+	        <?php while ( $the_query->have_posts() ) : ?>
+				<?php $the_query->the_post(); ?>
+	            <li> 
+					<img src="<?php the_field('image'); ?>" />
+	            </li>
+	           <?php endwhile; ?>
+	      	 </ul><!-- projects -->
+	</div><!-- projects -->
+ 
+ 
+<?php endif; // end loop ?>        
+<?php wp_reset_postdata(); ?>
+    
+</div><!-- project -->
 </section><!--Work -->
+
 
 <a name="contact"></a>
 <section class="contact">
