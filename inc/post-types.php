@@ -8,13 +8,13 @@ function js_custom_init()
 	// Register the Homepage Project
   
      $labels = array(
-	 'name' => _x('Project', 'post type general name'),
+	    'name' => _x('Projects', 'post type general name'),
     'singular_name' => _x('Project', 'post type singular name'),
     'add_new' => _x('Add New', 'Project'),
     'add_new_item' => __('Add New Project'),
-    'edit_item' => __('Edit Project'),
+    'edit_item' => __('Edit Projects'),
     'new_item' => __('New Project'),
-    'view_item' => __('View Project'),
+    'view_item' => __('View Projects'),
     'search_items' => __('Search Projects'),
     'not_found' =>  __('No Projects found'),
     'not_found_in_trash' => __('No Projects found in Trash'), 
@@ -36,7 +36,7 @@ function js_custom_init()
     'supports' => array('title','editor','custom-fields','thumbnail'),
 	
   ); 
-  register_post_type('service',$args); // name used in query
+  register_post_type('Project',$args); // name used in query
   
   // Add more between here
   

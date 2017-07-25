@@ -80,33 +80,28 @@ get_header(); ?>
 		<p><?php the_field('our_work_text'); ?></p>
 		
 		<div id="zenith-work">
-<?php 
-// Query the Post type Project
-$queryProject = array(
-	'post_type' => 'project',
-	'posts_per_page' => '-1'
-);
-// The Query
-$the_query = new WP_Query( $queryProject );
-?>
-<?php 
-// The Loop
- if ( $the_query->have_posts()) : ?>
- 
-	<div class="ZenithWork">
-	        <ul class="projects">
-	        <?php while ( $the_query->have_posts() ) : ?>
-				<?php $the_query->the_post(); ?>
-	            <li> 
-					<img src="<?php the_field('image'); ?>" />
-	            </li>
-	           <?php endwhile; ?>
-	      	 </ul><!-- projects -->
-	</div><!-- projects -->
- 
- 
-<?php endif; // end loop ?>        
-<?php wp_reset_postdata(); ?>
+		<?php $args=array(
+			'post_type'=>'project', 
+			'posts_per_page'=>9
+			);
+			$query=new WP_Query($args);
+			if($query->have_posts()):
+		?>
+						<div class="entry-content">
+							<div id="container">
+								<?php while($query->have_posts()): $query->the_post();
+								?>
+									<div class="project">
+										<?php the_content();?><p><?php the_field ('image');?></p>
+									</div>
+								<?php endwhile;?>
+							</div> <!--container -->
+						</div><!-- .entry-content -->
+					<?php wp_reset_postdata();endif;?>
+				</article><!-- #post-## -->
+
+		<?php endwhile; // End of the loop.
+		?>
     
 </div><!-- project -->
 </section><!--Work -->
