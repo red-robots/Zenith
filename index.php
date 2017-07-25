@@ -31,6 +31,7 @@ get_header(); ?>
 	    $image1 = get_field('image_1');
 	    $image2 = get_field('image_2');
 	    $image3 = get_field('image_3');
+	    $projectimage = get_field('project_image');
    
 ?>
 
@@ -92,7 +93,7 @@ get_header(); ?>
 							<?php while($query->have_posts()): $query->the_post();
 							?>
 								<div class="project">
-									<?php the_content();?><p><?php the_field ('project_image');?></p>
+									<h1><?php get_field('project_title');?></h1><img src="<?php echo $projectimage['sizes']['medium']; ?>"/><p><?php get_field('project_description');?></p>
 								</div>
 							<?php endwhile;?>
 						</div> <!--container -->
