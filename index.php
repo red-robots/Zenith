@@ -80,29 +80,28 @@ get_header(); ?>
 		</header>
 			<p><?php the_field('our_work_text'); ?></p>
 		
-	<div id="zenith-work">
-		<?php $args=array(
-			'post_type'=>'project', 
-			'posts_per_page'=>9
-			);
-			$query=new WP_Query($args);
-			if($query->have_posts()):
-		?>
-					<div class="our-work-project">
-						<div id="zenith-projects">
-							<?php while($query->have_posts()): $query->the_post();
-							?>
-								<div class="project">
-									<h1><?php get_field('project_title');?></h1><img src="<?php echo $projectimage['sizes']['medium']; ?>"/><p><?php get_field('project_description');?></p>
-								</div>
-							<?php endwhile;?>
-						</div> <!--container -->
-					</div><!-- .entry-content -->
-				<?php wp_reset_postdata();endif;?>
-			</article><!-- #post-## -->
+		<div id="zenith-work">
+			<?php $args=array(
+				'post_type'=>'project', 
+				'posts_per_page'=>-1
+				);
+				$query=new WP_Query($args);
+				if($query->have_posts()):
+			?>
+			<div class="our-work-project">
+				<div id="zenith-projects">
+					<?php while($query->have_posts()): $query->the_post();
+					?>
+						<div class="project">
+							<h1><?php get_field('project_title');?></h1><img src="<?php echo $projectimage['sizes']['medium']; ?>"/><p><?php get_field('project_description');?></p>
+						</div>
+					<?php endwhile;?>
+				</div> <!--zenith-projects -->
+			</div><!-- our-work-projects -->
+		<?php wp_reset_postdata();endif;?>
 
-		</div><!-- project -->
-		</section><!--Work -->
+		</div><!-- zenith-work -->
+	</section><!--Work -->
 
 
 	<a name="contact"></a>
