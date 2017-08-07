@@ -19,8 +19,8 @@
 		<div class="social-icons-footer">
 				
 				<span class="fa-stack fa-lg">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-facebook fa-stack-1x"></i>
+					<a href="https://www.facebook.com/Zenith-Building-Group-1256285867802854/ "><i class="fa fa-circle fa-stack-2x"></i></a>
+					<a href="https://www.facebook.com/Zenith-Building-Group-1256285867802854/ "><i class="fa fa-facebook fa-stack-1x"></i></a>
 				</span>
 					
 				<span class="fa-stack fa-lg">
