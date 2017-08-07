@@ -85,8 +85,8 @@ p {
 	margin: 0px auto;
 	.logo {
 		padding: 0px 20px 0px 20px;
-		position: absolute;
-		z-index: 3;
+		position: relative;
+		z-index: 1;
 		@media screen and (min-width: $tabwidth) {
 			padding: 0px 20px 0px 80px;
 		}
@@ -170,8 +170,9 @@ p {
 	    );
 	   	height: 100vh;
 	.banner-image {
-		margin: -40px;
+		margin: -20px;
 		height: 100vh;
+		z-index: -1;
 	}
 
 	.section-banner-text {
