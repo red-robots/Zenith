@@ -1397,7 +1397,7 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 @media screen and (min-width:600px){p{padding:0 120px}
 }.spacer{width:5%;border-bottom:2px solid #000;margin:0 auto;border-bottom-color:red;font-weight:bold}
 .wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin:0 auto}
-.wrapper .logo{padding:0 20px 0 20px}
+.wrapper .logo{padding:0 20px 0 20px;position:absolute;z-index:3}
 @media screen and (min-width:600px){.wrapper .logo{padding:0 20px 0 80px}
 }.wrapper .right-section{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;padding:10px 20px}
 @media screen and (min-width:600px){.wrapper .right-section{padding:10px 70px}
