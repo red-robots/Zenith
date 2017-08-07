@@ -38,7 +38,9 @@ get_header(); ?>
 
 
 	<section class="banner">
-		<img src="<?php echo $bannerimage['url']; ?>"/>
+		<div class="banner-image">
+			<img src="<?php echo $bannerimage['url']; ?>"/>
+		</div>
 			<header class="section-banner-text">
 				<h2><?php echo $subtext; ?></h2>
 				<h1><?php echo $mytext; ?></h1>
