@@ -32,11 +32,13 @@ get_header(); ?>
 	    $image2 = get_field('image_2');
 	    $image3 = get_field('image_3');
 	    $projectimage = get_field('project_image');
+	    $bannerimage = get_field('banner_image');
    
 ?>
 
 
 	<section class="banner">
+		<img src="<?php echo $bannerimage['sizes']['large']; ?>"/>
 		<header class="section-banner-text">
 			<h2><?php echo $subtext; ?></h2>
 			<h1><?php echo $mytext; ?></h1>
