@@ -31,7 +31,6 @@ get_header(); ?>
 	    $image1 = get_field('image_1');
 	    $image2 = get_field('image_2');
 	    $image3 = get_field('image_3');
-	    $projectimage = get_field('project_image');
 	    $bannerimage = get_field('banner_image');
    
 ?>
@@ -91,13 +90,16 @@ get_header(); ?>
 				);
 				$query=new WP_Query($args);
 				if($query->have_posts()):
+
+				$projectimage = get_field('project_image');
 			?>
 			<div class="our-work-project">
 				<div id="zenith-projects">
 					<?php while($query->have_posts()): $query->the_post();
 					?>
 						<div class="project">
-							<h1><?php get_field('project_title');?></h1><img src="<?php echo $projectimage['sizes']['medium']; ?>"/><p><?php get_field('project_description');?></p>
+							<h1><?php the_field('project_title');?></h1>
+							<img src="<?php echo $$projectimage['sizes']['medium']; ?>"/>
 						</div>
 					<?php endwhile;?>
 				</div> <!--zenith-projects -->

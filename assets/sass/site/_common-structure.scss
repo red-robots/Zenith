@@ -65,7 +65,7 @@ p {
 	font-size: 16pt;
 	padding: 0px 20px;
 		@media screen and (min-width: $tabwidth) {
-				padding: 0px 120px;
+				padding: 0px 20px;
 			}
 		@media screen and (min-width: $deskwidth) {
 
@@ -307,16 +307,31 @@ p {
 	width: 100%;
 	background-color: white;
 	padding: 20px;
+	.our-work-project {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		.project {
+			width: 200px;
+			padding: 20px;
+			h1 {
+				font-size: 18pt;
+				text-align: center;
+			}
+		}
+	}
 }
 
 .contact {
 	width: 100%;
 	background-color: #273274;
 	padding: 20px;
-	p {
-		color: white;
-		text-align: left;
-	}
+		p {
+			color: white;
+			text-align: left;
+		}
 }
 
 .footer {
@@ -327,19 +342,19 @@ p {
 		font-weight: lighter;
 		font-size: 14pt;
 	}
-	.social-icons-footer {
-		margin: -50px 0 0 70px;
-		font-size: 25px;
-	}
-	.fa {
-		color: white;
-	}
-	.fa-facebook {
-		color: black;
-		font-size: 20px;
-	}
-	.fa-linkedin {
-		color: black;
-		font-size: 20px;
-	}
+		.social-icons-footer {
+			margin: -50px 0 0 70px;
+			font-size: 25px;
+		}
+			.fa {
+				color: white;
+			}
+				.fa-facebook {
+					color: black;
+					font-size: 20px;
+				}
+					.fa-linkedin {
+						color: black;
+						font-size: 20px;
+					}
 }
