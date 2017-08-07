@@ -38,11 +38,11 @@ get_header(); ?>
 
 
 	<section class="banner">
-		<img src="<?php echo $bannerimage['sizes']['large']; ?>"/>
-		<header class="section-banner-text">
-			<h2><?php echo $subtext; ?></h2>
-			<h1><?php echo $mytext; ?></h1>
-		</header><!-- banner text -->
+		<img src="<?php echo $bannerimage['url']; ?>"/>
+			<header class="section-banner-text">
+				<h2><?php echo $subtext; ?></h2>
+				<h1><?php echo $mytext; ?></h1>
+			</header><!-- banner text -->
 	</section><!-- banner -->
 
 
