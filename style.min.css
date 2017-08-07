@@ -1412,7 +1412,7 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 .widget-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.widget-area{width:26%;float:right;margin:0}
 }@media screen and (min-width:1200px){}
-.banner{background:-webkit-linear-gradient(#273274,#f0d48b);background:linear-gradient(#273274,#f0d48b);height:100vh}
+.banner{background:-webkit-linear-gradient(#273274,#f0d48b);background:linear-gradient(#273274,#f0d48b);height:100vh;overflow:hidden}
 .banner .banner-image{margin:-30px;height:100vh;z-index:-1}
 .banner .banner-image:before{content:'';position:absolute;top:100px;right:0;bottom:0;left:0;background-image:-webkit-linear-gradient(#273274,#f0d48b);background-image:linear-gradient(#273274,#f0d48b);opacity:.6}
 .banner .section-banner-text{text-align:center;position:absolute;top:45%;bottom:55%;width:100%}
