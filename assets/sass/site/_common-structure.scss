@@ -271,7 +271,7 @@ p {
 	}
 }
 
-.services {
+/*.services {
 	width: 100%;
 	background-color: white;
 	padding: 20px;
@@ -297,21 +297,25 @@ p {
 				}
 		}
 	}	
-}
+}*/
 
 .work {
 	width: 100%;
 	background-color: white;
 	padding: 20px;
 	.our-work-project {
-	
+		align-content: center;
 		.project {
-			width: 300px;
+			margin-left: 10px;
+			margin-right: auto;
+			width: 400px;
+			height: 250px;
 			float: left;
 			padding: 20px;
 			h1 {
 				font-size: 18pt;
 				text-align: center;
+				display: none;
 			}
 		}
 	}
