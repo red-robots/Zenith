@@ -97,7 +97,7 @@ get_header(); ?>
 					?>
 						<div class="project">
 							<h1><?php the_field('project_title');?></h1>
-							<img src="<?php echo $projectimage['sizes']['medium']; ?>"/>
+							<center><img src="<?php echo $projectimage['sizes']['medium']; ?>"/></center>
 						</div>
 					<?php endwhile;?>
 					<div class="clear"></div>
