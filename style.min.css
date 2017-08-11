@@ -1422,9 +1422,8 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 @media screen and (min-width:600px){.banner .section-banner-text h2{margin-top:-30px;font-size:30pt;margin-bottom:20px}
 }.about{width:100%}
 .about .section-header-white{background-color:white;padding:20px}
-.about .section-header-white .us-images{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;padding:20px;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch}
-@media screen and (min-width:600px){.about .section-header-white .us-images{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around;padding-top:20px;padding-bottom:180px}
-}.newsletter{width:100%;background-color:#273274;padding:20px}
+.about .section-header-white .about-zenith-photo{width:30%;float:left;padding:20px;position:relative}
+.newsletter{width:100%;background-color:#273274;padding:20px}
 .newsletter p{color:white}
 .work{width:100%;background-color:white;padding:20px}
 .work .our-work-project .project{margin-left:10px;margin-right:auto;width:31%;float:left;padding:20px;position:relative}

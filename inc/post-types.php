@@ -40,6 +40,35 @@ function js_custom_init()
   
   // Add more between here
   
-  // and here
+     $labels = array(
+    'name' => _x('Aboutphotos', 'post type general name'),
+    'singular_name' => _x('Aboutphoto', 'post type singular name'),
+    'add_new' => _x('Add New', 'Aboutphoto'),
+    'add_new_item' => __('Add New Aboutphoto'),
+    'edit_item' => __('Edit Aboutphotos'),
+    'new_item' => __('New Aboutphoto'),
+    'view_item' => __('View Aboutphotos'),
+    'search_items' => __('Search Aboutphotos'),
+    'not_found' =>  __('No Aboutphotos found'),
+    'not_found_in_trash' => __('No Aboutphotos found in Trash'), 
+    'parent_item_colon' => '',
+    'menu_name' => 'Aboutphotos'
+  );
+  $args = array(
+  'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
+    'show_ui' => true, 
+    'show_in_menu' => true, 
+    'query_var' => true,
+    'rewrite' => true,
+    'capability_type' => 'post',
+    'has_archive' => false, 
+    'hierarchical' => false, // 'false' acts like posts 'true' acts like pages
+    'menu_position' => 20,
+    'supports' => array('title','editor','custom-fields','thumbnail'),
+  
+  ); 
+  register_post_type('Aboutphoto',$args); // name used in query
   
   } // close custom post type

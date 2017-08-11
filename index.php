@@ -51,12 +51,30 @@ get_header(); ?>
 			<h2><?php the_field('about_us_header'); ?></h2>
 			<div class="spacer"></div>
 		   	<p><?php the_field('about_us_text'); ?></p>
-		   	<img class="our-story-image">
-		   		<div class="us-images"> <!--custom post type "staff" -->
-		   			<img src="<?php echo $image1['sizes']['medium']; ?>"/>
-			   		<img src="<?php echo $image2['sizes']['medium']; ?>"/>
-			   		<img src="<?php echo $image3['sizes']['medium']; ?>"/>
-		   		</div><!--Images -->
+
+		   	<div id="zenith-about">
+			<?php $args=array(
+				'post_type'=>'aboutphoto', 
+				'posts_per_page'=>-1
+				);
+				$query=new WP_Query($args);
+				if($query->have_posts()):
+
+				
+			?>
+			<div class="about-us-photo">
+				<div id="zenith-photos">
+					<?php while($query->have_posts()): $query->the_post();
+					$zenithphoto = get_field('about_us_photo');
+					?>
+						<div class="about-zenith-photo">
+							<img src="<?php echo $zenithphoto['sizes']['medium']; ?>"/>
+						</div>
+					<?php endwhile;?>
+					<div class="clear"></div>
+				</div><!--about-us-photo -->
+			</div><!--zenith-photos -->
+			<?php wp_reset_postdata();endif;?>
 		</header>   		
 	</section><!-- About -->
 
