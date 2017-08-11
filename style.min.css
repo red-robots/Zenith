@@ -1430,7 +1430,7 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 .work .our-work-project .project{margin-left:10px;margin-right:auto;width:31%;float:left;padding:20px;position:relative}
 .work .our-work-project .project:hover h1{display:block}
 .work .our-work-project .project:hover img{opacity:.5;filter:alpha(opacity=40);z-index:-1}
-.work .our-work-project .project h1{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);font-size:18pt;text-transform:uppercase;color:black;border-style:solid;border-width:.5px;padding:5px;text-align:center;display:none;z-index:1}
+.work .our-work-project .project h1{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-60%);-ms-transform:translate(-50%,-60%);transform:translate(-50%,-60%);font-size:18pt;border-style:solid;border-width:.5px;padding:15px;text-transform:uppercase;color:black;text-align:center;display:none;z-index:1}
 .work .our-work-project .project img{opacity:1;filter:alpha(opacity=100)}
 .contact{width:100%;background-color:#273274;padding:20px}
 .contact p{color:white;text-align:left}
