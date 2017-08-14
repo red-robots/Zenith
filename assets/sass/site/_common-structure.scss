@@ -146,7 +146,7 @@ p {
 		margin: 0;
 	}
 	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
+		width: 100%;
 	}
 }
 
@@ -348,7 +348,42 @@ p {
 			text-align: left;
 		}
 }
-
+.zenith-projects-work {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: lightgray;
+	width: 100%;
+	.left-side-work {
+		width: 50%;
+		h1 {
+			font-size: 18pt;
+			color: black;
+			text-transform: uppercase;
+			padding: 50px 20px 20px 50px;
+		}
+		p {
+			padding: 50px 20px 20px 50px;
+			text-align: justify;
+		}
+	}
+	.right-side-work {
+		width: 50%;
+		padding: 20px;
+		.images-cont {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+		.images{
+			width: 30%;
+			margin: 2%;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}
 .footer {
 	background-color: #F0D48B;
 	padding: 30px;

@@ -25,7 +25,7 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-
+				<div class="zenith-projects-work">
 					<div class="left-side-work">
 						<h1><?php the_title(); ?></h1>
 						<?php the_field('project_description'); ?>
@@ -35,20 +35,31 @@ get_header(); ?>
 						<?php 
 
 						$images = get_field('project_gallery');
-						$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
+						$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+						$sizeL = 'large';
 
 						if( $images ): ?>
-						    <ul>
-						        <?php foreach( $images as $image ): ?>
-						            <li>
-						            	<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-						            </li>
+						    <div class="images-cont">
+						        <?php foreach( $images as $image ): 
+
+// echo '<pre>';
+// print_r($image);
+// echo '</pre>';
+						        ?>
+						            
+						            <div class="images">
+						            	<a class="gallery" href="<?php echo $image['url']; ?>" >
+						            		<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+						            	</a>
+						            </div>
+						            
 						        <?php endforeach; ?>
-						    </ul>
+						    </div>
+
 						<?php endif; ?>
 					</div>
-
+				</div>
 
 		</main><!--main -->
 	</div><!--primary -->
-get_footer();
+<?php get_footer(); ?>

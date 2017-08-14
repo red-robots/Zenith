@@ -114,8 +114,10 @@ get_header(); ?>
 					$projectimage = get_field('project_image');
 					?>
 						<div class="project">
-							<h1><?php the_field('project_title');?></h1>
+							<a href="<?php echo get_the_permalink(); ?>">
+							<h1><?php the_title();?></h1>
 							<center><img src="<?php echo $projectimage['sizes']['medium']; ?>"/></center>
+							</a>
 						</div>
 					<?php endwhile;?>
 					<div class="clear"></div>
