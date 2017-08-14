@@ -65,7 +65,7 @@ get_header(); ?>
 			<div class="about-us-photo">
 				<div id="zenith-photos">
 					<?php while($query->have_posts()): $query->the_post();
-					$zenithphoto = get_field('about_us_photo');
+					$zenithphoto = the_field('about_us_photo');
 					?>
 						<div class="about-zenith-photo">
 							<img src="<?php echo $zenithphoto['sizes']['medium']; ?>"/>

@@ -306,34 +306,34 @@ p {
 			float: left;
 			padding: 20px;
 			position: relative;
+			line-height: 0;
 			&:hover {
 				h1 {
-					display: block;
+					
 				}
 				img {
-					opacity: 0.5;
-    				filter: alpha(opacity=40);
-			    	z-index: -1;
+					color: black;
+					background-color: transparent;
 				}
 			}
 			h1 {
 				position: absolute;
-				top: 50%;
 				left: 50%;
-				transform: translate(-50%, -60%);
+				bottom: 0;
+				transform: translate(-50%, 0%);
 				font-size: 18pt;
-				border-style: solid;
-			    border-width: 0.5px;
-			    padding: 15px;
+			    padding: 18px;
+			    background-color: rgba(black, 0.6);
 				text-transform: uppercase;
-				color: black;
+				color: white;
+				width: 78%;
 				text-align: center;
-				display: none;
+				display: block;
 				z-index: 1;
+				line-height: 1.1;
 			}
 			img {
-				opacity: 1.0;
-    			filter: alpha(opacity=100);
+				line-height: 0;
 			}
 		}
 	}
