@@ -369,11 +369,12 @@ p {
 	}
 	.right-side-work {
 		width: 50%;
-		padding: 20px;
+		padding: 190px 20px;
 		.images-cont {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
+			justify-content: center;
 		}
 		.images{
 			width: 30%;

@@ -41,10 +41,6 @@ get_header(); ?>
 						if( $images ): ?>
 						    <div class="images-cont">
 						        <?php foreach( $images as $image ): 
-
-// echo '<pre>';
-// print_r($image);
-// echo '</pre>';
 						        ?>
 						            
 						            <div class="images">
