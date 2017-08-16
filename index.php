@@ -79,7 +79,7 @@ get_header(); ?>
 	</section><!-- About -->
 
 
-	<a name="newsletter"></a>
+	<a name="news"></a>
 	<section class="newsletter">
 		<header class="section-header-blue">
 				<h3><?php the_field('newsletter_subheader'); ?></h3>

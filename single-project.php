@@ -28,6 +28,7 @@ get_header(); ?>
 				<div class="zenith-projects-work">
 					<div class="left-side-work">
 						<h1><?php the_title(); ?></h1>
+						<h2><?php the_field('project_location') ?></h2>
 						<?php the_field('project_description'); ?>
 					</div>
 

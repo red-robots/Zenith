@@ -1432,10 +1432,12 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 .work .our-work-project .project img{line-height:0}
 .contact{width:100%;background-color:#273274;padding:20px}
 .contact p{color:white;text-align:left}
+.contact a{color:white}
 .zenith-projects-work{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:lightgray;width:100%}
 .zenith-projects-work .left-side-work{width:50%}
 .zenith-projects-work .left-side-work h1{font-size:18pt;color:black;text-transform:uppercase;padding:50px 20px 20px 50px}
-.zenith-projects-work .left-side-work p{padding:50px 20px 20px 50px;text-align:justify}
+.zenith-projects-work .left-side-work h2{font-size:14pt;color:black;font-weight:bold;padding:0 0 0 50px}
+.zenith-projects-work .left-side-work p{padding:10px 20px 20px 50px;text-align:justify}
 .zenith-projects-work .right-side-work{width:50%;padding:190px 20px}
 .zenith-projects-work .right-side-work .images-cont{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .zenith-projects-work .right-side-work .images{width:30%;margin:2%}
