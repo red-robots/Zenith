@@ -1431,8 +1431,9 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 .work .our-work-project .project h1{position:absolute;left:50%;bottom:0;-webkit-transform:translate(-50%,0);-ms-transform:translate(-50%,0);transform:translate(-50%,0);font-size:18pt;padding:18px;background-color:rgba(0,0,0,0.6);text-transform:uppercase;color:white;width:78%;text-align:center;display:block;z-index:1;line-height:1.1}
 .work .our-work-project .project img{line-height:0}
 .contact{width:100%;background-color:#273274;padding:20px}
-.contact p{color:white;text-align:center}
 .contact a{color:white;text-decoration:none}
+.contact p{color:white;text-align:center}
+.contact .contact-content{color:white;text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .zenith-projects-work{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:lightgray;width:100%}
 .zenith-projects-work .left-side-work{width:50%}
 .zenith-projects-work .left-side-work h1{font-size:18pt;color:black;text-transform:uppercase;padding:50px 20px 20px 50px}

@@ -135,6 +135,10 @@ get_header(); ?>
 				<h3><?php the_field('contact_us_subheader'); ?></h3>
 				<h2><?php the_field('contact_us_header'); ?></h2>
 				<p><?php the_field('contact_us_text'); ?></p>
+				<div class="contact-content">
+					<?php the_field('contact_us_text_1'); ?>
+					<?php the_field('contact_us_text_2'); ?>
+				</div>
 			</header>
 		</section><!--Contact -->
 
