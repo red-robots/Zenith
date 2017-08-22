@@ -35,7 +35,7 @@ get_header(); ?>
 					<div class="right-side-work">
 						<?php 
 
-						$images = get_field('project_gallery');
+						$images = get_field('image_gallery');
 						$size = 'medium'; // (thumbnail, medium, large, full or custom size)
 						$sizeL = 'large';
 
