@@ -1397,7 +1397,7 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 @media screen and (min-width:600px){p{padding:0 20px}
 }.spacer{width:5%;border-bottom:2px solid #000;margin:0 auto;border-bottom-color:red;font-weight:bold}
 .wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin:0 auto}
-.wrapper .logo{padding:20px 20px 0 20px;position:relative;z-index:1;margin:-30px}
+.wrapper .logo{padding:20px 20px 0 20px;position:relative;z-index:1;margin-bottom:-30px}
 @media screen and (min-width:600px){.wrapper .logo{padding:0 20px 0 100px}
 }.wrapper .right-section{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;padding:10px 20px}
 @media screen and (min-width:600px){.wrapper .right-section{padding:10px 70px}
@@ -1431,7 +1431,7 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 .work .our-work-project .project h1{position:absolute;left:50%;bottom:0;-webkit-transform:translate(-50%,0);-ms-transform:translate(-50%,0);transform:translate(-50%,0);font-size:18pt;padding:18px;background-color:rgba(0,0,0,0.6);text-transform:uppercase;color:white;width:78%;text-align:center;display:block;z-index:1;line-height:1.1}
 .work .our-work-project .project img{line-height:0}
 .contact{width:100%;background-color:#273274;padding:20px}
-.contact p{color:white;text-align:left}
+.contact p{color:white;text-align:center}
 .contact a{color:white}
 .zenith-projects-work{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:lightgray;width:100%}
 .zenith-projects-work .left-side-work{width:50%}
