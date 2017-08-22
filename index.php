@@ -80,7 +80,7 @@ get_header(); ?>
 
 
 	<a name="news"></a>
-	<section class="newsletter">
+	<section class="news">
 		<header class="section-header-blue">
 				<h3><?php the_field('newsletter_subheader'); ?></h3>
 		   		<h2><?php the_field('newsletter_header'); ?></h2>

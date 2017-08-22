@@ -1423,8 +1423,8 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 }.about{width:100%}
 .about .section-header-white{background-color:white;padding:20px}
 .about .section-header-white .about-zenith-photo{width:30%;float:left;padding:20px;position:relative}
-.newsletter{width:100%;background-color:#273274;padding:20px}
-.newsletter p{color:white}
+.news{width:100%;background-color:#273274;padding:20px}
+.news p{color:white}
 .work{width:100%;background-color:white;padding:20px}
 .work .our-work-project .project{margin-left:10px;margin-right:auto;width:31%;float:left;padding:20px;position:relative;line-height:0}
 .work .our-work-project .project:hover img{color:black;background-color:transparent}
@@ -1432,7 +1432,7 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 .work .our-work-project .project img{line-height:0}
 .contact{width:100%;background-color:#273274;padding:20px}
 .contact p{color:white;text-align:center}
-.contact a{color:white}
+.contact a{color:white;text-decoration:none}
 .zenith-projects-work{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:lightgray;width:100%}
 .zenith-projects-work .left-side-work{width:50%}
 .zenith-projects-work .left-side-work h1{font-size:18pt;color:black;text-transform:uppercase;padding:50px 20px 20px 50px}

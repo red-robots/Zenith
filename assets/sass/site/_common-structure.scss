@@ -257,7 +257,7 @@ p {
 	}
 }
 
-.newsletter {
+.news {
 	width: 100%;
 	background-color: #273274;
 	padding: 20px;
@@ -266,33 +266,6 @@ p {
 	}
 }
 
-/*.services {
-	width: 100%;
-	background-color: white;
-	padding: 20px;
-	.zenith-services {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-around;
-			align-content: stretch;
-			margin: auto;
-			li {
-				h2 {
-					//width: 100%;
-				}
-				p {
-					text-align: justify;
-					font-size: 12pt;
-					font-weight: lighter;
-					padding: 0px 450px;
-				}
-				.spacer {
-						width: 10%;
-				}
-		}
-	}	
-}*/
 
 .work {
 	width: 100%;
@@ -349,6 +322,7 @@ p {
 		}
 		a {
 			color: white;
+			text-decoration: none;
 		}
 }
 .zenith-projects-work {
