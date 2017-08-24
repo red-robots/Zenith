@@ -1409,7 +1409,11 @@ p{text-align:center;font-size:16pt;padding:0 20px}
 .content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
 }@media screen and (min-width:1200px){.content-area{width:100%}
-}.widget-area{width:100%;margin:0 auto}
+}.single-nav-left{padding:20px;padding-left:0;float:left}
+.single-nav-left a{color:white;background-color:grey;padding:10px;text-decoration:none}
+.single-nav-right{padding:20px;padding-right:0;float:right;margin:0}
+.single-nav-right a{color:white;text-decoration:none;background-color:grey;padding:10px}
+.widget-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.widget-area{width:26%;float:right;margin:0}
 }@media screen and (min-width:1200px){}
 .banner{height:100vh;overflow:hidden}

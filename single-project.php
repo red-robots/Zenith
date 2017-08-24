@@ -18,13 +18,16 @@ get_header(); ?>
 
 				get_template_part( 'content', get_post_format() );
 
+	
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
-				endif;
 
+				endif;
 			endwhile; // End of the loop.
 			?>
+
+
 				<div class="zenith-projects-work">
 					<div class="left-side-work">
 						<h1><?php the_title(); ?></h1>

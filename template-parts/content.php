@@ -19,6 +19,7 @@
 			}
 
 		if ( 'post' === get_post_type() ) : ?>
+
 		<div class="entry-meta">
 			<?php acstarter_posted_on(); ?>
 		</div><!-- .entry-meta -->
@@ -34,11 +35,13 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'acstarter' ),
 				'after'  => '</div>',
 			) );
 		?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
