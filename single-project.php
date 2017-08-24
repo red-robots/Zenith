@@ -33,14 +33,14 @@ get_header(); ?>
 						<h1><?php the_title(); ?></h1>
 							<h2><?php the_field('project_location') ?></h2>
 								<div class="single-nav-right">
-									<?php next_post_link( '%link','Next' ); ?>
+									<?php next_post_link( '%link','Previous' ); ?>
 								</div>
 							<?php the_field('project_description'); ?>
 					</div>
 				
 					<div class="right-side-work">
 						<div class="single-nav-left">
-							<?php previous_post_link('%link','Previous'); ?>
+							<?php previous_post_link('%link','Next'); ?>
 						</div>
 						<?php 
 
