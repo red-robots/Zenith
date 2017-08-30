@@ -361,9 +361,12 @@ p {
 			font-weight: bold;
 			padding: 0px 0px 0px 50px;
 		}
-		p {
-			padding: 80px 20px 20px 50px;
+		.copy {
+			padding: 80px 20px 20px 20px;
 			text-align: justify;
+			@media screen and (min-width: $tabwidth) {
+				padding: 80px 20px 20px 50px;
+			}
 		}
 		.single-nav-right {
 			padding: 20px 10px 20px 0;

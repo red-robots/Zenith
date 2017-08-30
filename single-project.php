@@ -38,7 +38,9 @@ get_header(); ?>
 							<div class="single-nav-left">
 								<?php previous_post_link('%link','Next'); ?>
 							</div>
-							<?php the_field('project_description'); ?>
+							<div class="copy">
+								<?php the_field('project_description'); ?>
+							</div>
 					</div>
 				
 					<div class="right-side-work">
