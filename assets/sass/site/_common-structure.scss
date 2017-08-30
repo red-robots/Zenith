@@ -78,30 +78,45 @@ p {
 	border-bottom-color: red;
 	font-weight: bold;
 }
-.wrapper {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+.header-wrapper {
 	margin: 0px auto;
+	@media screen and (min-width: $tabwidth) {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+	}
 	.logo {
 		padding: 20px 20px 0px 20px;
 		position: relative;
 		z-index: 1;
-		margin-bottom: -30px;
 		@media screen and (min-width: $tabwidth) {
 			padding: 0px 20px 0px 100px;
+			margin-bottom: -30px;
 		}
 		@media screen and (min-width: $deskwidth) {
 
 		}
+		a {
+			display: block;
+			img {
+				display: block;
+				margin: 0 auto;
+				@media screen and (min-width: $tabwidth) {
+					margin: 0;
+				}
+			}
+		}
 	}
 	.right-section {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-end;
 		padding: 10px 20px;
+		width: 100%;
 		@media screen and (min-width: $tabwidth) {
-			padding: 10px 70px;		}
+			padding: 10px 70px;
+			width: auto;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
 		@media screen and (min-width: $deskwidth) {
 
 		}
@@ -110,19 +125,25 @@ p {
 		padding: 10px;
 		position: relative;
 		color: white;
+		text-align: center;
 		@media screen and (min-width: $tabwidth) {
 			padding: 20px 20px 10px;
+			
 		}
 		@media screen and (min-width: $deskwidth) {
 
 		}
-
 		form {
 			display: none;
-			position: absolute;
-			right: 100%;
-			top: 20px;
+			margin: 20px auto 0 auto;
+			@media screen and (min-width: $tabwidth) {
+				position: absolute;
+				right: 100%;
+				margin: 0;
+				top: 20px;
+			}
 		}
+		
 	}
 
 	@media screen and (min-width: $tabwidth) {
@@ -155,15 +176,9 @@ p {
 .banner {
 		overflow: hidden;
 		position: relative;
-		@media screen and (min-width: $tabwidth) {
-			min-height: 100vh;
-		}
 	.banner-image {
 		position: relative;
 		z-index: -1;
-		@media screen and (min-width: $tabwidth) {
-			height: 100vh;
-		}
 		img {
 			width: 100%;
 			display: block;
@@ -333,8 +348,29 @@ p {
 			color: white;
 			text-align: center;
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			justify-content: center;
+			@media screen and (min-width: $tabwidth) {
+				flex-direction: row;
+			}
+	}
+}
+.template-page {
+	.zenith-projects-work {
+		.left-side-work {
+			h1 {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			.copy {
+				padding-top: 20px;
+			}	
+		}
+		.right-side-work {
+			@media screen and (min-width: $tabwidth) {
+				padding-top: 125px;
+			}
+		}
 	}
 }
 .zenith-projects-work {
@@ -363,9 +399,28 @@ p {
 		}
 		.copy {
 			padding: 80px 20px 20px 20px;
-			text-align: justify;
 			@media screen and (min-width: $tabwidth) {
 				padding: 80px 20px 20px 50px;
+			}
+			p {
+				text-align: left;
+			}
+			ul, ol {
+				padding: 0;
+				margin: 0 0 20px 20px;
+				font-size: inherit;
+				li {
+					margin: 0 0 0 20px;
+					font-size: inherit;
+					padding: 0;
+					list-style-type: square;
+					text-align: left;
+					a {
+					}
+					ul.sub-menu {
+					margin: 0;
+					}
+				}
 			}
 		}
 		.single-nav-right {
@@ -400,17 +455,12 @@ p {
 			width: 50%;
 			padding: 260px 0px 20px 0px;
 		}
-		.images-cont {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
 		.images{
-			width: 30%;
-			margin: 2%;
+			width: 50%;
+			padding: 10px;
 			img {
-				max-width: 100%;
+				width: 100%;
+				display: block;
 			}
 		}
 		.single-nav-left {
@@ -437,23 +487,32 @@ p {
 	background-color: #F0D48B;
 	padding: 30px;
 	h4 {
-		margin-left: 70px;
 		font-weight: lighter;
 		font-size: 14pt;
-	}
-		.social-icons-footer {
-			margin: -50px 0 0 70px;
-			font-size: 25px;
+		text-align: center;
+		@media screen and (min-width: $tabwidth) {
+			margin-left: 70px;
+			text-align: left;
 		}
-			.fa {
-				color: white;
-			}
-				.fa-facebook {
-					color: black;
-					font-size: 20px;
-				}
-					.fa-linkedin {
-						color: black;
-						font-size: 20px;
-					}
+	}
+	.social-icons-footer {
+		font-size: 25px;
+		text-align: center;
+		margin: -50px 0 0 0;
+		@media screen and (min-width: $tabwidth) {
+			margin: -50px 0 0 70px;
+			text-align: left;
+		}
+	}
+	.fa {
+		color: white;
+	}
+	.fa-facebook {
+		color: black;
+		font-size: 20px;
+	}
+	.fa-linkedin {
+		color: black;
+		font-size: 20px;
+	}
 }

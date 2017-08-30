@@ -28,7 +28,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="wrapper">
+		<div class="header-wrapper">
 				<div class="logo">
 					<a href="<?php bloginfo('url'); ?>"><img src="<?php the_field('company_name', 'option'); ?>"></a>
 				</div><!-- logo -->
@@ -41,7 +41,7 @@
 				</div><!--menu --> 
 					<div class="search-icon">
 						<i class="fa fa-search"></i>
-						<form role="search" method="get" class="search-form" action=" <?php esc_url( home_url( '/' ) );?>">
+						<form role="search" method="get" class="search-form" action=" <?php echo esc_url( home_url( ) );?>">
 			                <label>
 			                    <span class="screen-reader-text"><?php _x( 'Search for:', 'label' ) ;?></span>
 			                    <input type="search" class="search-field" placeholder="<?php esc_attr_x( 'Search &hellip;', 'placeholder' );?>" value=" <?php get_search_query();?>" name="s" />

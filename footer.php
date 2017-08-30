@@ -30,7 +30,7 @@
 
 		</div><!--social-icons-footer -->
 		
-		<h4><?php the_field('footer_text'); ?></h4>
+		<h4><?php the_field('footer_text',"option"); ?></h4>
 	</div><!--footer -->
 
 </footer><!-- #colophon -->

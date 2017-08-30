@@ -18,13 +18,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 <?php
-	$wp_query = new WP_Query();
-	$wp_query->query(array(
-		'post_type'=>'page',
-		'name'=>'homepage'
-	));
-
-	if ($wp_query->have_posts()) :  while ($wp_query->have_posts()) : $wp_query->the_post();
+	$post = get_post(38);
+	if ($post) :  setup_postdata($post);
 
 	    $mytext = get_field('banner_text');
 	    $subtext = get_field('banner_subheading'); 
@@ -143,8 +138,7 @@ get_header(); ?>
 		</section><!--Contact -->
 
 
-	<?php endwhile; //endwhile for main loop
-	endif; //endif for main loop
+	<?php endif; //endif for main loop
 	?> 
 	</main><!-- #main -->
 </div><!-- #primary -->

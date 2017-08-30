@@ -10,53 +10,43 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main template-page" role="main">
+			<div class="zenith-projects-work">
+				<div class="left-side-work">
+					<h1><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'acstarter' ); ?></h1>
+					<div class="copy">
+						<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try  a search?', 'acstarter' ); ?></p>
+					</div>
+				</div>
+				<div class="right-side-work">
+					<?php 
+					$post = get_post(322);
+					if($post):
+						setup_postdata($post);
+						$images = get_field('image_gallery');
+						$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+						$sizeL = 'large';
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'acstarter' ); ?></h1>
-				</header><!-- .page-header -->
+						if( $images ): ?>
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'acstarter' ); ?></p>
+							<div id="container" class="images-cont">
+								<?php foreach( $images as $image ): 
+								?>
+									
+									<div class="images item">
+										<a class="gallery" href="<?php echo $image['url']; ?>" >
+											<img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt'];?>">
+										</a>
+									</div>
+									
+								<?php endforeach; ?>
+							</div>
 
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						// Only show the widget if site has multiple categories.
-						if ( acstarter_categorized_blog() ) :
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'acstarter' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'acstarter' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
+						<?php endif; 
+						wp_reset_postdata();
+					endif;?>
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
