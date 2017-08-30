@@ -115,8 +115,8 @@ get_header(); ?>
 					?>
 						<div class="project">
 							<a href="<?php echo get_the_permalink(); ?>">
-							<h1><?php the_title();?></h1>
-							<center><img src="<?php echo $projectimage['sizes']['medium']; ?>"/></center>
+								<h1><?php the_title();?></h1>
+								<img src="<?php echo $projectimage['sizes']['medium']; ?>"/>
 							</a>
 						</div>
 					<?php endwhile;?>

@@ -32,9 +32,12 @@ get_header(); ?>
 					<div class="left-side-work">
 						<h1><?php the_title(); ?></h1>
 							<h2><?php the_field('project_location') ?></h2>
-								<div class="single-nav-right">
-									<?php next_post_link( '%link','Previous' ); ?>
-								</div>
+							<div class="single-nav-right">
+								<?php next_post_link( '%link','Previous' ); ?>
+							</div>
+							<div class="single-nav-left">
+								<?php previous_post_link('%link','Next'); ?>
+							</div>
 							<?php the_field('project_description'); ?>
 					</div>
 				
