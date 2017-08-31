@@ -28,71 +28,74 @@ get_header(); ?>
 ?>
 
 
-	<section class="banner">
-		<div class="banner-image">
-			<img src="<?php echo $bannerimage['url']; ?>"/>
-		</div>
-			<header class="section-banner-text">
-				<h2><?php echo $subtext; ?></h2>
-				<h1><?php echo $mytext; ?></h1>
-			</header><!-- banner text -->
-	</section><!-- banner -->
+		<section class="banner">
+			<div class="banner-image">
+				<img src="<?php echo $bannerimage['url']; ?>"/>
+			</div>
+				<header class="section-banner-text">
+					<h2><?php echo $subtext; ?></h2>
+					<h1><?php echo $mytext; ?></h1>
+				</header><!-- banner text -->
+		</section><!-- banner -->
 
 
-	<a name="about"></a>
-	<section class="about">
-		<header class="section-header-white">
-			<h3><?php the_field('about_us_subtext'); ?></h3>
-			<h2><?php the_field('about_us_header'); ?></h2>
-			<div class="spacer"></div>
-		   	<p><?php the_field('about_us_text'); ?></p>
+		<a name="about"></a>
+		<section class="about">
+			<header class="section-header-white">
+				<h3><?php the_field('about_us_subtext'); ?></h3>
+				<h2><?php the_field('about_us_header'); ?></h2>
+				<div class="spacer"></div>
+				<p><?php the_field('about_us_text'); ?></p>
 
-		   	<div id="zenith-about">
-			<?php $args=array(
-				'post_type'=>'aboutphoto', 
-				'posts_per_page'=>-1
-				);
-				$query=new WP_Query($args);
-				if($query->have_posts()):
+				<div id="zenith-about">
+				<?php $args=array(
+					'post_type'=>'aboutphoto', 
+					'posts_per_page'=>-1
+					);
+					$query=new WP_Query($args);
+					if($query->have_posts()):
 
-				
-			?>
-			<div class="about-us-photo">
-				<div id="zenith-photos">
-					<?php while($query->have_posts()): $query->the_post();
-					$zenithphoto = the_field('about_us_photo');
-					?>
-						<div class="about-zenith-photo">
-							<img src="<?php echo $zenithphoto['sizes']['medium']; ?>"/>
-						</div>
-					<?php endwhile;?>
-					<div class="clear"></div>
-				</div><!--about-us-photo -->
-			</div><!--zenith-photos -->
-			<?php wp_reset_postdata();endif;?>
-		</header>   		
-	</section><!-- About -->
+					
+				?>
+				<div class="about-us-photo">
+					<div id="zenith-photos">
+						<?php while($query->have_posts()): $query->the_post();
+						$zenithphoto = the_field('about_us_photo');
+						?>
+							<div class="about-zenith-photo">
+								<img src="<?php echo $zenithphoto['sizes']['medium']; ?>"/>
+							</div>
+						<?php endwhile;?>
+						<div class="clear"></div>
+					</div><!--about-us-photo -->
+				</div><!--zenith-photos -->
+				<?php wp_reset_postdata();endif;?>
+			</header>   		
+		</section><!-- About -->
 
+	<?php endif;?>
+	<?php $post = get_post(38);
+	if ($post) :  setup_postdata($post);?>
+		<a name="news"></a>
+		<section class="news">
+			<header class="section-header-blue">
+					<h3><?php the_field('newsletter_subheader'); ?></h3>
+					<h2><?php the_field('newsletter_header'); ?></h2>
+				<p><?php the_field('newsletter_text'); ?></p>
+			</header>
+		</section><!-- Newsletter -->
 
-	<a name="news"></a>
-	<section class="news">
-		<header class="section-header-blue">
-				<h3><?php the_field('newsletter_subheader'); ?></h3>
-		   		<h2><?php the_field('newsletter_header'); ?></h2>
-			<p><?php the_field('newsletter_text'); ?></p>
-		</header>
-	</section><!-- Newsletter -->
-
-
-	<a name="work"></a>
-	<section class="work">
-		<header class="section-header-white">
-			<h3><?php the_field('our_work_subheader'); ?></h3>
-			<h2><?php the_field('our_work_header'); ?></h2>
-			<div class="spacer"></div>
-		</header>
-			<p><?php the_field('our_work_text'); ?></p>
-		
+	<?php endif;?>
+	<?php $post = get_post(38);
+	if ($post) :  setup_postdata($post);?>
+		<a name="work"></a>
+		<section class="work">
+			<header class="section-header-white">
+				<h3><?php the_field('our_work_subheader'); ?></h3>
+				<h2><?php the_field('our_work_header'); ?></h2>
+				<div class="spacer"></div>
+			</header>
+				<p><?php the_field('our_work_text'); ?></p>
 		<div id="zenith-work">
 			<?php $args=array(
 				'post_type'=>'project', 
@@ -123,8 +126,11 @@ get_header(); ?>
 		</div><!-- zenith-work -->
 	</section><!--Work -->
 
+	<?php endif;?>	
+	<?php $post = get_post(38);
+	if ($post) :  setup_postdata($post);?>
 
-	<a name="contact"></a>
+		<a name="contact"></a>
 		<section class="contact">
 			<header class="section-header-blue">
 				<h3><?php the_field('contact_us_subheader'); ?></h3>
