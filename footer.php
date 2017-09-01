@@ -17,17 +17,20 @@
 		
 	<div class="footer">
 		<div class="social-icons-footer">
-				
-				<span class="fa-stack fa-lg">
-					<a href="https://www.facebook.com/Zenith-Building-Group-1256285867802854/ "><i class="fa fa-circle fa-stack-2x"></i></a>
-					<a href="https://www.facebook.com/Zenith-Building-Group-1256285867802854/ "><i class="fa fa-facebook fa-stack-1x"></i></a>
-				</span>
-					
-				<span class="fa-stack fa-lg">
-					<i class="fa fa-circle fa-stack-2x"></i>
-					<i class="fa fa-linkedin fa-stack-1x"></i>
-				</span>
-
+				<?php $facebook_link = get_field("facebook_link","option");
+				$linkedin_link = get_field("linkedin_link","option");
+				if($facebook_link):?>
+					<span class="fa-stack fa-lg">
+						<a href="<?php echo $facebook_link;?>"><i class="fa fa-circle fa-stack-2x"></i></a>
+						<a href="<?php echo $facebook_link;?>"><i class="fa fa-facebook fa-stack-1x"></i></a>
+					</span>
+				<?php endif;
+				if($linkedin_link):?>
+					<span class="fa-stack fa-lg">
+						<a href="<?php echo $linkedin_link;?>"><i class="fa fa-circle fa-stack-2x"></i></a>
+						<a href="<?php echo $linkedin_link;?>"><i class="fa fa-linkedin fa-stack-1x"></i></a>
+					</span>
+				<?php endif;?>
 		</div><!--social-icons-footer -->
 		
 		<h4><?php the_field('footer_text',"option"); ?></h4>
